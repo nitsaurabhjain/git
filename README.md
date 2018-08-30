@@ -35,6 +35,7 @@ $git help <command name>
 $git show <commit_id>//show the changes made under perticular commit
 $git status #show all untracked and staging area files.
 $git add <file name> or  git add . # to add all untracked file/s in staging area
+$git add -f <file name> # forecely add even it is in .gitignore file.
 $git log # shows all commits
 $git log --oneline # shows all commits in one line
 $git diff   or git diff <file name> # git diff compare the local files from staging area file
@@ -50,16 +51,23 @@ $git commit  # dont add -m 'message' to add multiline commit
 ```
 $git checkout <file> or git checkout .
 ```
-**git reset :-**  Undo all the changes from staging, and local repo and keep those files in working area. dangerous command thing twice before use since it also remove the commit history.
+**git reset :-**  Undo all the changes from staging, and local repo. It's a dangerous command, thing twice before you use it since it also remove the commit history.
 ```
 $git reset HEAD or <commit_id>// $git reset --mixed HEAD (default)
 $git reset HEAD~1
 $git reset HEAD~2
 $git rest --soft HEAD //undo the changes from local repo but keeps the changes in staging area
 $git rest --hard HEAD //undo the changes from local repo as weel as from staging area
+$ git push origin master -f // To push the same into repo
 ```
 **git revert:-** Undo changes made under any specific commit and make a new fresh commit. it's is good option because it does not affect the history.
 ```
 git revert <commit number>
 ```
+
+**Note:-** Remember `git revert ` revert the changes of specific commit but `git reset` revert the changes upto that commit. 
+**Ex**: Say we have three consultative commit c1, c2, and c3 and if we reset to c2 ie `git reset c2` then c3 will also be deleted. but in case of `git revert` only c2 changes will be removed
+
+
+
  [Downlod GIT]: <http://git-scm.com>
