@@ -2,15 +2,16 @@
 
 ### VCS
 Version control System is an utility used to manage multiple versions of our files/programs. It also have many other features like below.
-1. Make us aware from the merge conflict and solve it also.
-1. It allows us to merge the code when more then 1 team member is working on a project.
-1. Create a document.
+1. Multiple developer can work simulteniously
+1. provides the utility to solve conflict. it may come when more then one member work simulteniously.
 1. We can create a document for project
+1. Compare diff version of files or program
 
 ### GIT Specific 
 ```
-working directory (all files)---- Staging Area  (tracking files)-------Repository (committed files)
+working area (all files)---- Staging Area  (tracking files)-------Repository (committed files)
 ```
+[Interview Q/A][Q/A] 
 [downlod git from here][Downlod GIT] , install and do the below config
 
 ### Initial Configuration
@@ -83,5 +84,5 @@ git push origin master -f
 **Ex**: Say we have three consultative commit c1, c2, and c3 and if we reset to c2 ie `git reset c2` then c3 will also be deleted. but in case of `git revert` only c2 changes will be removed
 
 
-
+ [Q/A]: <https://www.toptal.com/git/interview-questions>
  [Downlod GIT]: <http://git-scm.com>
