@@ -32,12 +32,25 @@ $ git config --global --unset http.proxy
 ### IMP GIT commands
 ```
 $git help <command name>
+$git clone <url> #if u already have a project
+$git push -u <not required default> <where> <what>
+$git push origin master
+$git push origin feature_branch
 $git show <commit_id>//show the changes made under perticular commit
+$git remote add origin <url> # add/change the origin if we want to push/create to code in some other repository
+$git branch -a //shows all branch
+$git branch <branch name> // git branch feature1; create a new feature1 branch
+$git checkout <branch name> # git chechout feature1 ; switch to newly created feature1 branch # or
+$git branch -b <branch name> # git branch -b feature1; create a new branch and switch to newly created branch
+$git branch -d  <branch name> # git branch -d feature1 ; delete a branch;(-D: for force delete
+$git merge <branch name> # git merge feature1 ; merge the feature1 branch into current branch
+$git rebase master. # adds all the changes from master branch into your branch and then add your changes on the top of those changes
 $git status #show all untracked and staging area files.
 $git add <file name> or  git add . # to add all untracked file/s in staging area
 $git add -f <file name> # forecely add even it is in .gitignore file.
 $git log # shows all commits
 $git log --oneline # shows all commits in one line
+$git log --oneline --all --decorate --graph
 $git diff   or git diff <file name> # git diff compare the local files from staging area file
 $git diff HEAD <file name>  # compare the local files from repository
 $git diff HEAD~1 <file name>  # compare the local files from repository
@@ -56,13 +69,14 @@ $git checkout <file> or git checkout .
 $git reset HEAD or <commit_id>// $git reset --mixed HEAD (default)
 $git reset HEAD~1
 $git reset HEAD~2
-$git rest --soft HEAD //undo the changes from local repo but keeps the changes in staging area
-$git rest --hard HEAD //undo the changes from local repo as weel as from staging area
+$git reset --soft HEAD //undo the changes from local repo but keeps the changes in staging area
+$git reset --hard HEAD //undo the changes from local repo as weel as from staging area
 $ git push origin master -f // To push the same into repo
 ```
 **git revert:-** Undo changes made under any specific commit and make a new fresh commit. it's is good option because it does not affect the history.
 ```
 git revert <commit number>
+git push origin master -f
 ```
 
 **Note:-** Remember `git revert ` revert the changes of specific commit but `git reset` revert the changes upto that commit. 
