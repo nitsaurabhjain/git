@@ -84,5 +84,5 @@ git push origin master -f
 **Ex**: Say we have three consultative commit c1, c2, and c3 and if we reset to c2 ie `git reset c2` then c3 will also be deleted. but in case of `git revert` only c2 changes will be removed
 
 
- [Q/A]: <https://www.toptal.com/git/interview-questions>
+ [Q/A]: <https://www.edureka.co/blog/interview-questions/git-interview-questions/>
  [Downlod GIT]: <http://git-scm.com>
