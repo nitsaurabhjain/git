@@ -38,6 +38,7 @@ $git push -u <not required default> <where> <what>
 $git push origin master
 $git push origin feature_branch
 $git show <commit_id>//show the changes made under perticular commit
+$git show <commit_id> --name-only
 $git remote add origin <url> # add/change the origin if we want to push/create to code in some other repository
 $git branch -a //shows all branch
 $git branch <branch name> // git branch feature1; create a new feature1 branch
@@ -83,6 +84,19 @@ git push origin master -f
 **Note:-** Remember `git revert ` revert the changes of specific commit but `git reset` revert the changes upto that commit. 
 **Ex**: Say we have three consultative commit c1, c2, and c3 and if we reset to c2 ie `git reset c2` then c3 will also be deleted. but in case of `git revert` only c2 changes will be removed
 
+### Git stash
+
+### Git stash
+```
+$git stash //create a stash
+$git stash push -m "feature1" //create a stash with comment
+$git stash list //list out all stash
+$git stash apply //switch to latest stash
+$git stash apply 1  or $git stash apply stash stash@{0} //switch to specific
+$git stash drop 1 //drop specific stash
+$git stash clear //remove all stash
+$git stash show  -p // p is option and used to show the content to show the contenct
+```
 
  [Q/A]: <https://www.edureka.co/blog/interview-questions/git-interview-questions/>
  [Downlod GIT]: <http://git-scm.com>
